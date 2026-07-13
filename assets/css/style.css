@@ -9,10 +9,43 @@
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(112, 0, 255, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 242, 234, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 80px;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Navigation */
@@ -48,7 +81,6 @@
     width: 40px;
     height: 40px;
     object-fit: contain;
-    border-radius: 50%;
 }
 
 .nav-brand {
