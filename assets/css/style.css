@@ -71,10 +71,11 @@ body {
     height: 80px;
 }
 
-.nav-logo {
+.nav-logo a {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
 }
 
 .nav-logo-img {
