@@ -25,16 +25,11 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 
 - HTML5
 - CSS3
-- Bootstrap 5
-- JavaScript (ES6)
+- JavaScript
 
 ### Icons
 
 - Bootstrap Icons
-
-### Fonts
-
-- Google Fonts
 
 ### Deployment
 
