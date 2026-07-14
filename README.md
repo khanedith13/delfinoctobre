@@ -6,3 +6,15 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 ## 🌐 Live Website
 
 🔗 **Portfolio:** https://your-portfolio-link.vercel.app          
+
+# ✨ Features
+
+- About Me
+- Skills Section
+- Project Showcase
+- Experience
+- Contact Form
+- External Links
+- Downloadable Resume
+- Responsive Design
+- Dark Theme
