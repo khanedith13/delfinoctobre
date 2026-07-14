@@ -18,3 +18,24 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 - Downloadable Resume
 - Responsive Design
 - Dark Theme
+
+# 🛠️ Built With
+
+### Frontend
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript (ES6)
+
+### Icons
+
+- Bootstrap Icons
+
+### Fonts
+
+- Google Fonts
+
+### Deployment
+
+- Vercel
