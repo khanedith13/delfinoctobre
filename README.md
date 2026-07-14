@@ -48,17 +48,16 @@ Full Stack Software Developer
 
 ---
 
-# 📬 Contact
+## 📫 Connect with Me
 
-Feel free to connect with me!
+<div align="center">
 
-**Portfolio**
-> https://link-coming-soon.vercel.app
+📧 **octobredelfin13@gmail.com** &nbsp;  &nbsp; 📱 **+63 993 179 0930**
 
-**GitHub**
-> https://github.com/khanedith13
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:octobredelfin13@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/octobredelfin13/)
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://www.facebook.com/octobredelfin13)
 
-**LinkedIn**
-> https://linkedin.com/in/octobredelfin13
+</div>
 
 
