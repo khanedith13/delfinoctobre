@@ -5,7 +5,7 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 
 ## 🌐 Live Website
 
-🔗 **Portfolio:** https://your-portfolio-link.vercel.app          
+🔗 **Portfolio:** https://link-coming-soon.vercel.app          
 
 # ✨ Features
 
@@ -39,3 +39,31 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 ### Deployment
 
 - Vercel
+
+# 📈 Future Improvements
+
+- Light/Dark Theme Toggle
+- AI Chat Assistant
+
+## 👨‍💻 Author
+
+**Delfin G. Octobre** aka. **khanedith13**
+
+Full Stack Software Developer
+
+---
+
+# 📬 Contact
+
+Feel free to connect with me!
+
+**Portfolio**
+> https://link-coming-soon.vercel.app
+
+**GitHub**
+> https://github.com/khanedith13
+
+**LinkedIn**
+> https://linkedin.com/in/octobredelfin13
+
+
