@@ -331,3 +331,76 @@ body {
     margin-bottom: 60px;
     color: var(--text-primary);
 }
+
+/* ===== Two-column portfolio layout ===== */
+.portfolio-layout {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 40px;
+    align-items: start;
+    padding-top: 40px;
+}
+
+/* Sticky profile card */
+.profile-card {
+    position: sticky;
+    top: 100px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px 24px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+}
+.profile-card-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+.profile-card-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+.profile-card-role {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-top: -8px;
+}
+.profile-card-facts {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: left;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.profile-card-facts li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-card-facts i {
+    color: var(--accent-color);
+}
+.profile-card-btn {
+    width: 100%;
+    justify-content: center;
+}
+.profile-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
