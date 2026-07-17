@@ -355,6 +355,11 @@ body {
     align-items: center;
     text-align: center;
     gap: 14px;
+    transition: top 0.4s ease, transform 0.4s ease;
+}
+.profile-card.is-centered {
+    top: 50%;
+    transform: translateY(-50%);
 }
 .profile-card-img {
     width: 110px;
