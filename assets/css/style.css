@@ -9,7 +9,6 @@
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +20,10 @@ img {
     height: auto;
     display: block;
 }
-
 html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
-
 
 body {
     background-color: var(--bg-color);
@@ -60,7 +57,6 @@ body {
     z-index: 1000;
     transition: all 0.3s ease;
 }
-
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -70,34 +66,29 @@ body {
     align-items: center;
     height: 80px;
 }
-
 .nav-logo a {
     display: flex;
     align-items: center;
     gap: 12px;
     text-decoration: none;
 }
-
 .nav-logo-img {
     width: 40px;
     height: 40px;
     object-fit: contain;
     border-radius: 50%;
 }
-
 .nav-brand {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-primary);
 }
-
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 30px;
 }
-
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
@@ -105,11 +96,9 @@ body {
     transition: color 0.3s ease;
     position: relative;
 }
-
 .nav-link:hover {
     color: var(--accent-color);
 }
-
 .nav-link::after {
     content: '';
     position: absolute;
@@ -120,17 +109,14 @@ body {
     background: var(--accent-color);
     transition: width 0.3s ease;
 }
-
 .nav-link:hover::after {
     width: 100%;
 }
-
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
 .bar {
     width: 25px;
     height: 3px;
@@ -146,20 +132,17 @@ body {
     align-items: center;
     padding: 80px 0;
 }
-
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
-
 .hero-text h1 {
     font-family: var(--font-heading);
     font-size: 3.5rem;
@@ -170,18 +153,15 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .hero-text p {
     color: var(--text-secondary);
     font-size: 1.2rem;
     margin-bottom: 20px;
     line-height: 1.6;
 }
-
 .hero-image {
     text-align: center;
 }
-
 .profile-img {
     width: 300px;
     height: 300px;
@@ -190,7 +170,6 @@ body {
     border: 4px solid var(--accent-color);
     margin-bottom: 20px;
 }
-
 .badge {
     display: inline-block;
     background: rgba(0, 242, 234, 0.1);
@@ -202,13 +181,11 @@ body {
     margin-bottom: 20px;
     width: fit-content;
 }
-
 .hero-actions {
     margin-top: 30px;
     display: flex;
     gap: 20px;
 }
-
 .btn {
     padding: 15px 30px;
     border-radius: 12px;
@@ -221,50 +198,41 @@ body {
     border: none;
     cursor: pointer;
 }
-
 .btn.primary {
     background: var(--text-primary);
     color: #000;
 }
-
 .btn.primary:hover {
     background: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 242, 234, 0.3);
 }
-
 .btn.secondary {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
 }
-
 .btn.secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     border: rgba(0, 242, 234, 0.3);
     transform: translateY(-2px);
 }
-
 .btn-outline {
     background: transparent;
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
-
 .btn-outline:hover {
     background: var(--accent-color);
     color: #000;
 }
-
 .btn-primary {
     background: var(--accent-color);
     color: #000;
 }
-
 .btn-primary:hover {
     background: var(--accent-secondary);
     transform: translateY(-2px);
 }
-
 .status-indicator {
     font-size: 0.9rem;
     color: #00ff88;
@@ -277,7 +245,6 @@ body {
     width: fit-content;
     margin: 0 auto;
 }
-
 .dot {
     width: 8px;
     height: 8px;
@@ -287,17 +254,14 @@ body {
     box-shadow: 0 0 10px #00ff88;
     animation: pulse 2s infinite;
 }
-
 @keyframes pulse {
     0% { box-shadow: 0 0 10px #00ff88; }
     50% { box-shadow: 0 0 20px #00ff88; }
     100% { box-shadow: 0 0 10px #00ff88; }
 }
-
 .accent-text {
     color: var(--accent-color);
 }
-
 .hero-image {
     display: flex;
     flex-direction: column;
@@ -305,13 +269,11 @@ body {
     justify-content: center;
     gap: 20px;
 }
-
 .profile-wrapper {
     display: flex;
     align-items: center;
     gap: 24px;
 }
-
 .profile-img {
     width: 300px;
     height: 300px;
@@ -319,13 +281,11 @@ body {
     object-fit: cover;
     border: 4px solid var(--accent-color);
 }
-
 .social-links {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-
 .social-links a {
     width: 48px;
     height: 48px;
@@ -341,14 +301,12 @@ body {
     text-decoration: none;
     transition: 0.3s ease;
 }
-
 .social-links a:hover {
     background: var(--accent-color);
     color: #000;
-    transform: translateX(6px); /* Subtle nudge to the right on hover */
+    transform: translateX(6px);
     box-shadow: 0 0 25px rgba(0, 242, 234, 0.5);
 }
-
 .status-indicator {
     font-size: 0.9rem;
     color: #00ff88;
@@ -366,11 +324,83 @@ body {
 .section {
     padding: 100px 0;
 }
-
 .section-title {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 60px;
     color: var(--text-primary);
+}
+
+/* ===== Two-column portfolio layout ===== */
+.portfolio-layout {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 40px;
+    align-items: start;
+    padding-top: 40px;
+}
+
+/* Sticky profile card */
+.profile-card {
+    position: sticky;
+    top: 100px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px 24px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+}
+.profile-card-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+.profile-card-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+.profile-card-role {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-top: -8px;
+}
+.profile-card-facts {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: left;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.profile-card-facts li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-card-facts i {
+    color: var(--accent-color);
+}
+.profile-card-btn {
+    width: 100%;
+    justify-content: center;
+}
+.profile-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
 }

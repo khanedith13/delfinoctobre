@@ -10,15 +10,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/icons/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Sticky Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">
-                    <img src="/assets/images/logos/portfolio-logo.png" alt="Delfin Octobre personal logo" class="nav-logo-img">
-                    <span class="nav-brand">Delfin Octobre</span>
+                    <img src="/assets/images/logos/portfolio-logo.png" alt="Delfin G. Octobre personal logo" class="nav-logo-img">
+                    <span class="nav-brand">Delfin G. Octobre</span>
                 </a>
             </div>
             <ul class="nav-menu">
@@ -46,21 +49,21 @@
                     <div class="hero-text">
                         <div class="badge">Hello, I'm</div>
                             <h1>Delfin G. Octobre</h1>
-                            <span class="accent-text"><h2>Full Stack Software Developer</h2></span> 
+                            <span class="accent-text"><h2>Full Stack Software Developer</h2></span>
                         <p>
-                            Bridging hardware and software through clean code, creative problem-solving, 
-                            and innovative solutions. I build responsive applications while learning 
+                            Bridging hardware and software through clean code, creative problem-solving,
+                            and innovative solutions. I build responsive applications while learning
                             Quality Assurance and Artificial Intelligence to create smarter technology solutions.
                         </p>
                         <div class="hero-actions">
-                            <a href="mailto:octobredelfin13@gmail.com" class="btn primary">Contact Me</a>
+                            <a href="#contact" class="btn primary">Contact Me</a>
                             <a href="/assets/documents/Delfin_G_Octobre_Resume.pdf" target="_blank" class="btn secondary">Download Resume</a>
                         </div>
                     </div>
                     <div class="hero-image">
                         <div class="profile-wrapper">
                             <img src="/assets/images/profile/profile.png" alt="Delfin G. Octobre profile picture" class="profile-img">
-                            
+
                             <div class="social-links">
                                 <a href="https://github.com/khanedith13" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                     <i class="bi bi-github"></i>
@@ -77,11 +80,31 @@
                             <span class="dot"></span>Available for Work
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Two-column layout: sticky profile card + scrollable content -->
+        <div class="portfolio-layout container">
+
+            <!-- LEFT ~25% : sticky at-a-glance card -->
+            <aside class="profile-card">
+                <img src="/assets/images/profile/profile.png" alt="Delfin G. Octobre" class="profile-card-img">
+                <h3 class="profile-card-name">Delfin G. Octobre</h3>
+                <p class="profile-card-role">Full Stack Software Developer</p>
+    
+                <ul class="profile-card-facts">
+                    <li><i class="bi bi-briefcase"></i> Open to Junior/Mid Roles</li>
+                    <li><i class="bi bi-mortarboard"></i> A.C.T. - Software Development</li>
+                    <li><i class="bi bi-geo-alt"></i>Ceby City, Philippines</li>
+                </ul>
+    
+                <div class="profile-card-actions">
+                    <a href="#contact" class="btn primary profile-card-btn">Contact Me</a>
+                    <a href="/assets/documents/Delfin_G_Octobre_Resume.pdf" target="_blank" class="btn secondary profile-card-btn">Download Resume</a>
+                </div>
+            </aside>
+        </div>
 
     </main>
 
