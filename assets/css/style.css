@@ -422,8 +422,8 @@ body {
 }
 .about-grid-reversed {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 60px;
+    grid-template-columns: 2fr 0.6fr;
+    gap: 50px;
     align-items: start;
 }
 .about-intro {
