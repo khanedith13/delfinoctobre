@@ -55,3 +55,45 @@
         }
     });
 })();
+
+(function () {
+    const timeline = document.getElementById('timeline');
+    const timelineFill = document.getElementById('timelineFill');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    if (!timeline || !timelineFill || !timelineItems.length) return;
+
+    let ticking = false;
+
+    function updateTimeline() {
+        ticking = false;
+
+        const rect = timeline.getBoundingClientRect();
+        const viewportMiddle = window.innerHeight * 0.5;
+
+        // How far the viewport's middle has traveled through the timeline's height
+        const progress = (viewportMiddle - rect.top) / rect.height;
+        const clamped = Math.min(Math.max(progress, 0), 1);
+
+        timelineFill.style.height = `${clamped * 100}%`;
+
+        // Light up each dot once the fill line has reached it
+        timelineItems.forEach(item => {
+            const itemRect = item.getBoundingClientRect();
+            const itemOffset = itemRect.top - rect.top;
+            const itemProgress = itemOffset / rect.height;
+            item.classList.toggle('is-active', clamped >= itemProgress);
+        });
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateTimeline);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    updateTimeline();
+})();
+
