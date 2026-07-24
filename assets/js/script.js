@@ -188,18 +188,36 @@
             return;
         }
 
-        // Build a mailto link with the validated form data
-        const name = fields.name.input.value.trim();
-        const email = fields.email.input.value.trim();
-        const subject = fields.subject.input.value.trim();
-        const message = fields.message.input.value.trim();
+        // Submit to Formspree via fetch — no page reload, keeps our own validation UI
+        const submitBtn = form.querySelector('.contact-submit-btn');
+        submitBtn.disabled = true;
+        formStatus.textContent = 'Sending...';
+        formStatus.className = 'form-status';
 
-        const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-        const mailtoLink = `mailto:octobredelfin13@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
-
-        window.location.href = mailtoLink;
-
-        formStatus.textContent = 'Opening your email client...';
-        formStatus.className = 'form-status success';
+        fetch('https://formspree.io/f/xojgkrve', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent! I\'ll get back to you soon.';
+                    formStatus.className = 'form-status success';
+                    form.reset();
+                } else {
+                    return response.json().then(data => {
+                        const errorMsg = (data.errors || []).map(e => e.message).join(', ');
+                        formStatus.textContent = errorMsg || 'Something went wrong. Please try again.';
+                        formStatus.className = 'form-status error';
+                    });
+                }
+            })
+            .catch(() => {
+                formStatus.textContent = 'Something went wrong. Please check your connection and try again.';
+                formStatus.className = 'form-status error';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+            });
     });
 })();
