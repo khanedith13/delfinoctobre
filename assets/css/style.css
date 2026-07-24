@@ -872,3 +872,132 @@ section[id] {
     line-height: 1.6;
 }
 
+/* ===== Contact Section — mirrors About/Skills/Projects/Experience layout ===== */
+.contact-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0 60px 0; /* was 30px 0 100px 0 */
+}
+
+.contact-inner {
+    width: 100%;
+}
+
+.contact-grid-reversed {
+    display: grid;
+    grid-template-columns: 2fr 0.6fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-intro {
+    position: sticky;
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    min-width: 0;
+}
+
+.contact-details {
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .contact-grid-reversed {
+        grid-template-columns: 1fr;
+    }
+    .contact-intro {
+        position: static;
+        align-items: flex-start;
+    }
+}
+
+/* Contact form */
+.contact-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 22px; /* was 30px */
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* was 20px */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* was 8px */
+}
+
+.form-group label {
+    font-size: 0.85rem; /* was 0.9rem */
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 9px 14px; /* was 12px 16px */
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem; /* was 0.95rem */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 70px; /* was 120px */
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(0, 242, 234, 0.15);
+}
+
+/* Invalid state */
+.form-group.has-error input,
+.form-group.has-error textarea {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.15);
+}
+
+.form-error {
+    font-size: 0.8rem;
+    color: #ff4d4d;
+    min-height: 16px;
+    display: none;
+}
+
+.form-group.has-error .form-error {
+    display: block;
+}
+
+.contact-submit-btn {
+    width: fit-content;
+    justify-content: center;
+}
+
+.form-status {
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.form-status.success {
+    color: #00ff88;
+}
+
+.form-status.error {
+    color: #ff4d4d;
+}
