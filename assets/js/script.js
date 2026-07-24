@@ -97,3 +97,109 @@
     updateTimeline();
 })();
 
+(function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    const fields = {
+        name: {
+            input: document.getElementById('contactName'),
+            error: document.getElementById('nameError'),
+            validate: (value) => {
+                if (!value.trim()) return 'Please enter your name.';
+                if (value.trim().length < 2) return 'Name must be at least 2 characters.';
+                return '';
+            }
+        },
+        email: {
+            input: document.getElementById('contactEmail'),
+            error: document.getElementById('emailError'),
+            validate: (value) => {
+                if (!value.trim()) return 'Please enter your email.';
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(value.trim())) return 'Please enter a valid email address.';
+                return '';
+            }
+        },
+        subject: {
+            input: document.getElementById('contactSubject'),
+            error: document.getElementById('subjectError'),
+            validate: (value) => {
+                if (!value.trim()) return 'Please enter a subject.';
+                return '';
+            }
+        },
+        message: {
+            input: document.getElementById('contactMessage'),
+            error: document.getElementById('messageError'),
+            validate: (value) => {
+                if (!value.trim()) return 'Please enter a message.';
+                if (value.trim().length < 10) return 'Message should be at least 10 characters.';
+                return '';
+            }
+        }
+    };
+
+    const formStatus = document.getElementById('formStatus');
+
+    function showError(field, message) {
+        field.input.closest('.form-group').classList.add('has-error');
+        field.error.textContent = message;
+    }
+
+    function clearError(field) {
+        field.input.closest('.form-group').classList.remove('has-error');
+        field.error.textContent = '';
+    }
+
+    function validateField(key) {
+        const field = fields[key];
+        const message = field.validate(field.input.value);
+        if (message) {
+            showError(field, message);
+            return false;
+        }
+        clearError(field);
+        return true;
+    }
+
+    // Validate on blur (as the user leaves each field) for immediate feedback
+    Object.keys(fields).forEach(key => {
+        fields[key].input.addEventListener('blur', () => validateField(key));
+        fields[key].input.addEventListener('input', () => {
+            // Clear error as soon as they start correcting it
+            if (fields[key].input.closest('.form-group').classList.contains('has-error')) {
+                validateField(key);
+            }
+        });
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+        Object.keys(fields).forEach(key => {
+            if (!validateField(key)) isValid = false;
+        });
+
+        if (!isValid) {
+            formStatus.textContent = 'Please fix the errors above before sending.';
+            formStatus.className = 'form-status error';
+            return;
+        }
+
+        // Build a mailto link with the validated form data
+        const name = fields.name.input.value.trim();
+        const email = fields.email.input.value.trim();
+        const subject = fields.subject.input.value.trim();
+        const message = fields.message.input.value.trim();
+
+        const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        const mailtoLink = `mailto:octobredelfin13@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
+
+        window.location.href = mailtoLink;
+
+        formStatus.textContent = 'Opening your email client...';
+        formStatus.className = 'form-status success';
+    });
+})();
