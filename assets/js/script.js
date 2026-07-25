@@ -285,3 +285,15 @@
             });
     });
 })();
+
+(function () {
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const backToTop = document.getElementById('backToTop');
+    if (!backToTop) return;
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
