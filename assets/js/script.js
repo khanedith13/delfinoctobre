@@ -3,17 +3,44 @@
     const navMenu = document.querySelector('.nav-menu');
     if (!hamburger || !navMenu) return;
 
-    hamburger.addEventListener('click', () => {
+    function closeMenu() {
+        navMenu.classList.remove('is-open');
+        hamburger.classList.remove('is-active');
+    }
+
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevents this click from immediately triggering the outside-click listener below
         navMenu.classList.toggle('is-open');
         hamburger.classList.toggle('is-active');
     });
 
     navMenu.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('is-open');
-            hamburger.classList.remove('is-active');
-        });
+        link.addEventListener('click', closeMenu);
     });
+
+    // Close when clicking anywhere outside the menu or hamburger button
+    document.addEventListener('click', (e) => {
+        const isOpen = navMenu.classList.contains('is-open');
+        const clickedInsideMenu = navMenu.contains(e.target);
+        const clickedHamburger = hamburger.contains(e.target);
+
+        if (isOpen && !clickedInsideMenu && !clickedHamburger) {
+            closeMenu();
+        }
+    });
+
+    // Close on scroll (main content scrolling behind the open menu)
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+        if (!navMenu.classList.contains('is-open')) return;
+        if (!scrollTicking) {
+            requestAnimationFrame(() => {
+                closeMenu();
+                scrollTicking = false;
+            });
+            scrollTicking = true;
+        }
+    }, { passive: true });
 })();
 
 (function () {
