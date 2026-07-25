@@ -842,6 +842,25 @@ section[id] {
         align-items: flex-start;
     }
 }
+@media (max-width: 900px) {
+    .skills-grid-reversed {
+        grid-template-columns: 1fr;
+    }
+    .skills-intro {
+        position: static;
+        align-items: center;
+        text-align: center;
+        order: -1;
+    }
+    .skills-details {
+        order: 2;
+    }
+    .skills-intro .about-title,
+    .skills-intro .about-short {
+        text-align: center;
+        max-width: none;
+    }
+}
 
 /* ===== Projects Section ===== */
 .projects-section {
