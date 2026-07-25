@@ -1176,7 +1176,17 @@ section[id] {
     }
     .contact-intro {
         position: static;
-        align-items: flex-start;
+        align-items: center; 
+        text-align: center;
+        order: -1; 
+    }
+    .contact-details {
+        order: 2;
+    }
+    .contact-intro .about-title,
+    .contact-intro .about-short {
+        text-align: center;
+        max-width: none;
     }
 }
 /* Contact form */
