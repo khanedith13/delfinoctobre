@@ -1,4 +1,22 @@
 (function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    if (!hamburger || !navMenu) return;
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-active');
+    });
+
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('is-open');
+            hamburger.classList.remove('is-active');
+        });
+    });
+})();
+
+(function () {
     const cards = document.querySelectorAll('.project-card');
     const overlay = document.getElementById('projectOverlay');
     if (!cards.length || !overlay) return;
