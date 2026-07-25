@@ -745,7 +745,8 @@ section[id] {
     }
     .about-intro {
         position: static;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         order: -1;
     }
     .about-details {
@@ -753,7 +754,8 @@ section[id] {
     }
     .about-title,
     .about-short {
-        text-align: left;
+        text-align: center;
+        max-width: none; 
     }
     .soft-skills-grid {
         grid-template-columns: 1fr;
