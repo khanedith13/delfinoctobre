@@ -746,6 +746,10 @@ section[id] {
     .about-intro {
         position: static;
         align-items: flex-start;
+        order: -1;
+    }
+    .about-details {
+        order: 2;
     }
     .about-title,
     .about-short {
