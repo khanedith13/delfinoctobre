@@ -542,6 +542,72 @@ section[id] {
     gap: 12px;
     width: 100%;
 }
+.profile-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.profile-card-name,
+.profile-card-role {
+    margin: 0;
+}
+@media (max-width: 900px) {
+    .portfolio-layout {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        order: 1;
+    }
+    .profile-card {
+        order: 2; 
+        position: static;
+        top: auto;
+    }
+}
+@media (max-width: 900px) {
+    .profile-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "img details"
+            "actions actions";
+        align-items: center;
+        column-gap: 18px;
+        row-gap: 20px;
+        text-align: left;
+        padding: 24px 20px;
+    }
+    .profile-card-img {
+        grid-area: img;
+        width: 80px;
+        height: 80px;
+    }
+    .profile-card-details {
+        grid-area: details;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .profile-card-name {
+        font-size: 1rem;
+    }
+    .profile-card-role {
+        margin-top: 0;
+        font-size: 0.85rem;
+    }
+    .profile-card-facts {
+        text-align: left;
+        font-size: 0.8rem;
+        padding: 10px 0 0;
+        margin-top: 4px;
+        border-top: 1px solid var(--border-color);
+        border-bottom: none; 
+    }
+    .profile-card-actions {
+        grid-area: actions;
+    }
+}
 
 /* ===== About Section ===== */
 .about-section {
