@@ -116,6 +116,52 @@
 })();
 
 (function () {
+    const cards = document.querySelectorAll('.certificate-card');
+    const overlay = document.getElementById('certificateOverlay');
+    if (!cards.length || !overlay) return;
+
+    const overlayImg = overlay.querySelector('.certificate-overlay-img');
+    const overlayTitle = overlay.querySelector('.certificate-overlay-title');
+    const overlayMeta = overlay.querySelector('.certificate-overlay-meta');
+    const closeBtn = overlay.querySelector('.certificate-overlay-close');
+    const backdrop = overlay.querySelector('.certificate-overlay-backdrop');
+
+    function openOverlay(card) {
+        overlayImg.src = card.dataset.image || '';
+        overlayImg.alt = card.dataset.title || '';
+        overlayTitle.textContent = card.dataset.title || '';
+        overlayMeta.textContent = `${card.dataset.issuer || ''} · ${card.dataset.date || ''}`;
+
+        overlay.classList.add('is-open');
+
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    function closeOverlay() {
+        overlay.classList.remove('is-open');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => openOverlay(card));
+    });
+
+    closeBtn.addEventListener('click', closeOverlay);
+    backdrop.addEventListener('click', closeOverlay);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+            closeOverlay();
+        }
+    });
+})();
+
+(function () {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
