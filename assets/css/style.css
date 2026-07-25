@@ -560,9 +560,12 @@ section[id] {
         order: 1;
     }
     .profile-card {
-        order: 2; 
+        order: 2;
         position: static;
         top: auto;
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
     }
 }
 @media (max-width: 900px) {
