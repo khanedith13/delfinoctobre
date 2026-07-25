@@ -1123,6 +1123,25 @@ section[id] {
     color: var(--text-secondary);
     line-height: 1.6;
 }
+@media (max-width: 900px) {
+    .experience-grid-reversed {
+        grid-template-columns: 1fr;
+    }
+    .experience-intro {
+        position: static;
+        align-items: center;
+        text-align: center;
+        order: -1; 
+    }
+    .experience-details {
+        order: 2;
+    }
+    .experience-intro .about-title,
+    .experience-intro .about-short {
+        text-align: center;
+        max-width: none;
+    }
+}
 
 /* ===== Contact Section ===== */
 .contact-section {
