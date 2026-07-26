@@ -1,4 +1,28 @@
 (function () {
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    if (!sections.length || !navLinks.length) return;
+
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                navLinks.forEach(link => {
+                    const isMatch = link.getAttribute('href') === `#${entry.target.id}`;
+                    link.classList.toggle('active', isMatch);
+                });
+            });
+        },
+        {
+            rootMargin: '-45% 0px -45% 0px' // triggers when a section crosses the vertical middle of the viewport
+        }
+    );
+
+    sections.forEach(section => sectionObserver.observe(section));
+})();
+
+(function () {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     if (!hamburger || !navMenu) return;

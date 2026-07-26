@@ -112,6 +112,12 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
+.nav-link.active {
+    color: var(--accent-color);
+}
+.nav-link.active::after {
+    width: 100%;
+}
 .hamburger {
     display: none;
     flex-direction: column;
