@@ -1468,6 +1468,10 @@ section[id] {
     line-height: 1.6;
     max-width: 32ch;
 }
+.footer-highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
 .footer-heading {
     font-family: var(--font-heading);
     font-size: 0.9rem;
@@ -1495,6 +1499,15 @@ section[id] {
     font-size: 0.95rem;
     margin-top: 2px;
     flex-shrink: 0; 
+}
+.footer-detail-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-detail-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 @media (max-width: 768px) {
     .footer-details {
