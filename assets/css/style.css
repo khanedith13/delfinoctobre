@@ -1588,7 +1588,7 @@ section[id] {
 }
 .footer-bottom-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
