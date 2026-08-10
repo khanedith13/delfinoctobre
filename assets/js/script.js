@@ -372,19 +372,30 @@
     }
 
     if (footerBottom && footerBottomInner) {
+        let isInFooter = false; 
+
         const footerObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+                    const shouldBeInFooter = entry.isIntersecting;
+
+                    if (shouldBeInFooter === isInFooter) return; 
+
+                    isInFooter = shouldBeInFooter;
+
+                    if (isInFooter) {
                         backToTop.classList.add('in-footer', 'is-visible');
                         footerBottomInner.appendChild(backToTop);
                     } else {
                         backToTop.classList.remove('in-footer');
-                        floatingHome.appendChild(backToTop);
+                        document.body.appendChild(backToTop);
                     }
                 });
             },
-            { threshold: 0.6 }
+            {
+                threshold: 0.6,
+                rootMargin: '0px 0px -10% 0px' 
+            }
         );
 
         footerObserver.observe(footerBottom);
