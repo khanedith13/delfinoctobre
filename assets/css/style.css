@@ -829,6 +829,7 @@ section[id] {
 .skill-category-card .skill-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 .skill-category-card .skill-tag {
