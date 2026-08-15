@@ -337,14 +337,67 @@
     });
 })();
 
+
 (function () {
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     const backToTop = document.getElementById('backToTop');
-    if (!backToTop) return;
+    const hero = document.getElementById('home');
+    const about = document.getElementById('about');
+    const footerBottom = document.querySelector('.footer-bottom');
+    const footerBottomInner = document.querySelector('.footer-bottom-inner');
+    const floatingHome = document.body;
+    if (!backToTop || !hero) return;
 
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    const aboutObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (!backToTop.classList.contains('in-footer')) {
+                    backToTop.classList.toggle('is-visible', entry.boundingClientRect.top <= 0 || entry.isIntersecting);
+                }
+            });
+        },
+        { threshold: 0 }
+    );
+
+    if (about) {
+        aboutObserver.observe(about);
+    } else {
+        aboutObserver.observe(hero);
+    }
+
+    if (footerBottom && footerBottomInner) {
+        let isInFooter = false; 
+
+        const footerObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const shouldBeInFooter = entry.isIntersecting;
+
+                    if (shouldBeInFooter === isInFooter) return; 
+
+                    isInFooter = shouldBeInFooter;
+
+                    if (isInFooter) {
+                        backToTop.classList.add('in-footer', 'is-visible');
+                        footerBottomInner.appendChild(backToTop);
+                    } else {
+                        backToTop.classList.remove('in-footer');
+                        document.body.appendChild(backToTop);
+                    }
+                });
+            },
+            {
+                threshold: 0.6,
+                rootMargin: '0px 0px -10% 0px' 
+            }
+        );
+
+        footerObserver.observe(footerBottom);
+    }
 })();
