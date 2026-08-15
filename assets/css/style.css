@@ -920,32 +920,34 @@ section[id] {
     flex-direction: column;
     justify-content: center;
     padding: 24px;
-    background: rgba(10, 10, 10, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.78); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     pointer-events: none;
 }
-.project-card:hover .project-card-hover {
-    opacity: 1;
-    transform: translateY(0);
-}
 .project-card-hover-title {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    color: var(--text-primary);
+    color: var(--text-primary); 
     margin-bottom: 8px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
 }
 .project-card-hover-desc {
-    color: var(--text-secondary);
+    color: #d0d0d0; 
     font-size: 0.85rem;
     line-height: 1.5;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.project-card:hover .project-card-hover {
+    opacity: 1;
+    transform: translateY(0);
 }
 .project-card:hover {
     transform: translateY(-4px);
