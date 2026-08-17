@@ -418,9 +418,17 @@ body {
         font-size: 0.85rem;
     }
     .hero-actions {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 14px;
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between;
+        width: 100%;
+    }
+    .hero-actions .btn {
+        flex: 1; 
+        justify-content: center;
+        white-space: nowrap;
+        padding: 13px 16px;
+        font-size: 0.9rem;
     }
     .profile-img {
         width: clamp(120px, 35vw, 160px);
@@ -437,10 +445,6 @@ body {
     }
 }
 @media (max-width: 380px) {
-    .hero-actions {
-        flex-direction: column;
-        width: 100%;
-    }
     .hero-actions .btn {
         width: 100%;
         justify-content: center;
