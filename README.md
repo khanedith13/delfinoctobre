@@ -1,11 +1,11 @@
 # 🚀 Delfin G. Octobre | Personal Portfolio
 
 Welcome to my personal portfolio website! This portfolio showcases who I am, the projects I've built, 
-the technologies I'm learning, and my journey towards becoming a **Full Stack Software Developer** and **AI Engineer**.
+the technologies I'm learning, and my journey towards becoming a **Full Stack Software Developer**.
 
 ## 🌐 Live Website
 
-🔗 **Portfolio:** https://link-coming-soon.vercel.app          
+🔗 **Portfolio:** https://delfingoctobre.vercel.app/         
 
 # ✨ Features
 
@@ -42,9 +42,9 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 
 ## 👨‍💻 Author
 
-**Delfin G. Octobre** aka. **khanedith13**
+**Delfin G. Octobre** | **khanedith13**
 
-Full Stack Software Developer
+Aspiring Full Stack Software Developer
 
 ---
 
