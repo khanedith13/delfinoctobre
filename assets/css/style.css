@@ -715,6 +715,9 @@ section[id] {
     font-size: 1rem;
     margin-bottom: 6px;
 }
+.edu-item .desc {
+    text-align: justify;
+}
 .edu-meta {
     color: var(--accent-color);
     font-size: 0.85rem;
