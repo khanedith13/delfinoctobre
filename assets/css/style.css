@@ -1074,7 +1074,6 @@ section[id] {
         max-width: none;
     }
 }
-
 /* Project expand overlay */
 .project-overlay {
     position: fixed;
@@ -1100,9 +1099,9 @@ section[id] {
     background-color: #141414;
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    max-width: 640px;
+    max-width: 720px; /* was 640px — a bit wider to give the bigger image more room */
     width: 100%;
-    max-height: 85vh;
+    max-height: 90vh; /* was 85vh — more vertical room overall */
     overflow-y: auto;
     transform: scale(0.9);
     opacity: 0;
@@ -1135,8 +1134,9 @@ section[id] {
 }
 .project-overlay-img {
     width: 100%;
-    height: 320px;
-    object-fit: cover;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #000; 
     border-radius: 20px 20px 0 0;
 }
 .project-overlay-body {
