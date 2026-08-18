@@ -1049,8 +1049,11 @@ section[id] {
 @media (max-width: 900px) {
     .project-stack-item {
         height: auto;
-        min-height: 85vh;
-        top: 80px;
+        min-height: 90vh;
+        top: 100px;
+    }
+    .project-stack-item .project-card {
+        max-height: 90vh;
     }
     .projects-grid-reversed {
         grid-template-columns: 1fr;
@@ -1099,9 +1102,9 @@ section[id] {
     background-color: #141414;
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    max-width: 720px; /* was 640px — a bit wider to give the bigger image more room */
+    max-width: 720px; 
     width: 100%;
-    max-height: 90vh; /* was 85vh — more vertical room overall */
+    max-height: 90vh; 
     overflow-y: auto;
     transform: scale(0.9);
     opacity: 0;
