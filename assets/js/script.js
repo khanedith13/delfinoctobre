@@ -68,6 +68,24 @@
 })();
 
 (function () {
+    const toggles = document.querySelectorAll('.skill-category-toggle');
+    if (!toggles.length) return;
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const card = toggle.closest('.skill-category-card');
+            const isOpen = card.classList.toggle('is-open');
+
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+            const icon = toggle.querySelector('.toggle-icon');
+            icon.classList.toggle('bi-caret-down-fill', !isOpen);
+            icon.classList.toggle('bi-caret-up-fill', isOpen);
+        });
+    });
+})();
+
+(function () {
     const cards = document.querySelectorAll('.project-card');
     const overlay = document.getElementById('projectOverlay');
     if (!cards.length || !overlay) return;
