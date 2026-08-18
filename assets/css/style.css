@@ -1024,14 +1024,13 @@ section[id] {
 .project-stack-item {
     height: 100vh;
     position: sticky;
-    top: 140px; 
     display: flex;
     align-items: flex-start;
     padding-bottom: 40px;
 }
 .project-stack-item .project-card {
     width: 100%;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 260px); /* was 200px — slightly shorter, leaves room for the peeking edge above */
     display: flex;
     flex-direction: column;
 }
@@ -1042,18 +1041,22 @@ section[id] {
     object-fit: contain;
     background: #000; 
 }
-.project-stack-item:nth-child(1) .project-card { z-index: 1; }
-.project-stack-item:nth-child(2) .project-card { z-index: 2; }
-.project-stack-item:nth-child(3) .project-card { z-index: 3; }
-.project-stack-item:nth-child(4) .project-card { z-index: 4; }
+.project-stack-item:nth-child(1) { top: 140px; }
+.project-stack-item:nth-child(2) { top: 170px; }
+.project-stack-item:nth-child(3) { top: 200px; }
+.project-stack-item:nth-child(4) { top: 230px; }
 @media (max-width: 900px) {
     .project-stack-item {
         height: auto;
         min-height: 90vh;
-        top: 100px;
     }
+    .project-stack-item:nth-child(1) { top: 100px; }
+    .project-stack-item:nth-child(2) { top: 120px; }
+    .project-stack-item:nth-child(3) { top: 140px; }
+    .project-stack-item:nth-child(4) { top: 160px; }
+
     .project-stack-item .project-card {
-        max-height: 90vh;
+        max-height: 80vh;
     }
     .projects-grid-reversed {
         grid-template-columns: 1fr;
