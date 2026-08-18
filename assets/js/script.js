@@ -69,6 +69,7 @@
 
 (function () {
     const cards = document.querySelectorAll('.is-collapsible');
+    const skillsSection = document.getElementById('skills');
     if (!cards.length) return;
 
     function openCard(card) {
@@ -126,17 +127,21 @@
         });
     });
 
-    // Close on scroll
-    let scrollTicking = false;
-    window.addEventListener('scroll', () => {
-        if (!scrollTicking) {
-            requestAnimationFrame(() => {
-                closeAllCards();
-                scrollTicking = false;
-            });
-            scrollTicking = true;
-        }
-    }, { passive: true });
+    // Close only once the Skills section itself has been scrolled out of view entirely
+    if (skillsSection) {
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        closeAllCards();
+                    }
+                });
+            },
+            { threshold: 0 } // fires the instant zero pixels of the section remain visible
+        );
+
+        sectionObserver.observe(skillsSection);
+    }
 })();
 (function () {
     const cards = document.querySelectorAll('.project-card');
