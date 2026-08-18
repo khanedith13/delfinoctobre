@@ -68,23 +68,76 @@
 })();
 
 (function () {
-    const toggles = document.querySelectorAll('.skill-category-toggle');
-    if (!toggles.length) return;
+    const cards = document.querySelectorAll('.is-collapsible');
+    if (!cards.length) return;
 
-    toggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const card = toggle.closest('.skill-category-card');
-            const isOpen = card.classList.toggle('is-open');
+    function openCard(card) {
+        card.classList.add('is-open');
+        card.setAttribute('aria-expanded', 'true');
+        const icon = card.querySelector('.toggle-icon');
+        icon.classList.remove('bi-caret-down-fill');
+        icon.classList.add('bi-caret-up-fill');
+    }
 
-            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    function closeCard(card) {
+        card.classList.remove('is-open');
+        card.setAttribute('aria-expanded', 'false');
+        const icon = card.querySelector('.toggle-icon');
+        icon.classList.remove('bi-caret-up-fill');
+        icon.classList.add('bi-caret-down-fill');
+    }
 
-            const icon = toggle.querySelector('.toggle-icon');
-            icon.classList.toggle('bi-caret-down-fill', !isOpen);
-            icon.classList.toggle('bi-caret-up-fill', isOpen);
+    function toggleCard(card) {
+        if (card.classList.contains('is-open')) {
+            closeCard(card);
+        } else {
+            openCard(card);
+        }
+    }
+
+    function closeAllCards() {
+        cards.forEach(card => {
+            if (card.classList.contains('is-open')) {
+                closeCard(card);
+            }
+        });
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCard(card);
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleCard(card);
+            }
         });
     });
-})();
 
+    // Close when clicking anywhere outside all collapsible cards
+    document.addEventListener('click', (e) => {
+        cards.forEach(card => {
+            if (card.classList.contains('is-open') && !card.contains(e.target)) {
+                closeCard(card);
+            }
+        });
+    });
+
+    // Close on scroll
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+        if (!scrollTicking) {
+            requestAnimationFrame(() => {
+                closeAllCards();
+                scrollTicking = false;
+            });
+            scrollTicking = true;
+        }
+    }, { passive: true });
+})();
 (function () {
     const cards = document.querySelectorAll('.project-card');
     const overlay = document.getElementById('projectOverlay');

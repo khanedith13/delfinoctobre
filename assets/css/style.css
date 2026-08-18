@@ -851,46 +851,34 @@ section[id] {
     font-size: 0.82rem;
     white-space: nowrap;
 }
-.skill-category-toggle {
-    width: 100%;
-    background: none;
-    border: none;
+/* ===== Additive-only: collapse behavior for the last 3 cards ===== */
+.is-collapsible {
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var(--font-heading);
-    font-size: 1.05rem;
-    color: var(--text-primary);
-    padding: 0;
+}
+
+.is-collapsible .skill-category-title {
     margin-bottom: 0;
 }
 
-.skill-category-toggle span {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-category-toggle i:first-child {
-    color: var(--accent-color);
-    font-size: 1.2rem;
-}
-
-.toggle-icon {
+.is-collapsible .toggle-icon {
+    margin-left: auto;
     color: var(--text-secondary);
     font-size: 0.85rem;
     transition: transform 0.3s ease;
 }
 
-.skill-category-toggle[aria-expanded="true"] .toggle-icon {
+.is-collapsible[aria-expanded="true"] .toggle-icon {
     transform: rotate(180deg);
 }
 
 .skill-tags-wrapper {
     display: grid;
-    grid-template-rows: 0fr; /* collapsed by default */
-    transition: grid-template-rows 0.35s ease;
+    grid-template-rows: 0fr;
+    margin-top: 0; /* now an explicit starting value, not just "absent" */
+    opacity: 0;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
 }
 
 .skill-tags-wrapper > .skill-tags {
@@ -899,8 +887,12 @@ section[id] {
 }
 
 .is-collapsible.is-open .skill-tags-wrapper {
-    grid-template-rows: 1fr; /* expanded */
-    margin-top: 18px; /* matches the original margin-bottom on skill-category-title */
+    grid-template-rows: 1fr;
+    margin-top: 18px;
+    opacity: 1;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s ease 0.1s;
 }
 @media (max-width: 900px) {
     .skills-grid-reversed {
