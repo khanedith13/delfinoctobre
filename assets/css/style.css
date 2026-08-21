@@ -1454,6 +1454,19 @@ section[id] {
         text-align: center;
         max-width: none;
     }
+    .contact-submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .form-actions p {
+        opacity: 10%;
+    }
 }
 /* Contact form */
 .contact-form {
@@ -1505,6 +1518,9 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.form-actions p {
+    opacity: 10%;
 }
 /* Invalid state */
 .form-group.has-error input,
