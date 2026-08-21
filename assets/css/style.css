@@ -1442,9 +1442,9 @@ section[id] {
     }
     .contact-intro {
         position: static;
-        align-items: center; 
+        align-items: center;
         text-align: center;
-        order: -1; 
+        order: -1;
     }
     .contact-details {
         order: 2;
@@ -1454,18 +1454,16 @@ section[id] {
         text-align: center;
         max-width: none;
     }
-    .contact-submit-btn {
-        width: 100%;
-        justify-content: center;
-    }
+
     .form-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
+        flex-direction: column; 
+        align-items: stretch; 
+        gap: 14px;
     }
-    .form-actions p {
-        opacity: 10%;
+
+    .contact-submit-btn {
+        width: 100% !important; 
+        justify-content: center;
     }
 }
 /* Contact form */
