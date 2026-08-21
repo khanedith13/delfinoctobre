@@ -454,11 +454,11 @@
             (entries) => {
                 entries.forEach(entry => {
                     const shouldBeInFooter = entry.isIntersecting;
-
-                    if (shouldBeInFooter === isInFooter) return; 
-
+        
+                    if (shouldBeInFooter === isInFooter) return;
+        
                     isInFooter = shouldBeInFooter;
-
+        
                     if (isInFooter) {
                         backToTop.classList.add('in-footer', 'is-visible');
                         footerBottomInner.appendChild(backToTop);
@@ -469,8 +469,8 @@
                 });
             },
             {
-                threshold: 0.6,
-                rootMargin: '0px 0px -10% 0px' 
+                threshold: 0,
+                rootMargin: '0px 0px 0px 0px' 
             }
         );
 
