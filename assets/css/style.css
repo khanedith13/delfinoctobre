@@ -1037,6 +1037,11 @@ section[id] {
         text-align: center;
         max-width: none;
     }
+    .project-overlay-links {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 /* Project expand overlay */
 .project-overlay {
