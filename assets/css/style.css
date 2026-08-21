@@ -973,48 +973,6 @@ section[id] {
     border-bottom: 1px solid var(--border-color);
     flex-shrink: 0;
 }
-.project-card-hover {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 24px;
-    background: rgba(0, 0, 0, 0.78); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    pointer-events: none;
-}
-.project-card-hover-title {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--text-primary); 
-    margin-bottom: 8px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
-}
-.project-card-hover-desc {
-    color: #d0d0d0; 
-    font-size: 0.85rem;
-    line-height: 1.5;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    display: -webkit-box;
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-.project-card:hover .project-card-hover {
-    opacity: 1;
-    transform: translateY(0);
-}
-.project-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0, 242, 234, 0.3);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
 .project-card-img {
     width: 100%;
     flex: 1;
