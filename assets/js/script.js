@@ -68,6 +68,82 @@
 })();
 
 (function () {
+    const cards = document.querySelectorAll('.is-collapsible');
+    const skillsSection = document.getElementById('skills');
+    if (!cards.length) return;
+
+    function openCard(card) {
+        card.classList.add('is-open');
+        card.setAttribute('aria-expanded', 'true');
+        const icon = card.querySelector('.toggle-icon');
+        icon.classList.remove('bi-caret-down-fill');
+        icon.classList.add('bi-caret-up-fill');
+    }
+
+    function closeCard(card) {
+        card.classList.remove('is-open');
+        card.setAttribute('aria-expanded', 'false');
+        const icon = card.querySelector('.toggle-icon');
+        icon.classList.remove('bi-caret-up-fill');
+        icon.classList.add('bi-caret-down-fill');
+    }
+
+    function toggleCard(card) {
+        if (card.classList.contains('is-open')) {
+            closeCard(card);
+        } else {
+            openCard(card);
+        }
+    }
+
+    function closeAllCards() {
+        cards.forEach(card => {
+            if (card.classList.contains('is-open')) {
+                closeCard(card);
+            }
+        });
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCard(card);
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleCard(card);
+            }
+        });
+    });
+
+    // Close when clicking anywhere outside all collapsible cards
+    document.addEventListener('click', (e) => {
+        cards.forEach(card => {
+            if (card.classList.contains('is-open') && !card.contains(e.target)) {
+                closeCard(card);
+            }
+        });
+    });
+
+    // Close only once the Skills section itself has been scrolled out of view entirely
+    if (skillsSection) {
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        closeAllCards();
+                    }
+                });
+            },
+            { threshold: 0 } // fires the instant zero pixels of the section remain visible
+        );
+
+        sectionObserver.observe(skillsSection);
+    }
+})();
+(function () {
     const cards = document.querySelectorAll('.project-card');
     const overlay = document.getElementById('projectOverlay');
     if (!cards.length || !overlay) return;
@@ -378,11 +454,11 @@
             (entries) => {
                 entries.forEach(entry => {
                     const shouldBeInFooter = entry.isIntersecting;
-
-                    if (shouldBeInFooter === isInFooter) return; 
-
+        
+                    if (shouldBeInFooter === isInFooter) return;
+        
                     isInFooter = shouldBeInFooter;
-
+        
                     if (isInFooter) {
                         backToTop.classList.add('in-footer', 'is-visible');
                         footerBottomInner.appendChild(backToTop);
@@ -393,8 +469,8 @@
                 });
             },
             {
-                threshold: 0.6,
-                rootMargin: '0px 0px -10% 0px' 
+                threshold: 0,
+                rootMargin: '0px 0px 0px 0px' 
             }
         );
 
