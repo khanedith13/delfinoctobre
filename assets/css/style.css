@@ -478,17 +478,10 @@ section[id] {
 }
 
 /* ===== Two-column portfolio layout ===== */
-.portfolio-layout {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    gap: 40px;
-    align-items: start;
-    padding-top: 40px;
-}
-
-/* Content Wrapper  */
+.portfolio-layout,
 .content {
     min-width: 0;
+    overflow-x: hidden;
 }
 
 /* Sticky profile card */
