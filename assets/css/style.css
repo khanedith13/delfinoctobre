@@ -481,7 +481,6 @@ section[id] {
 .portfolio-layout,
 .content {
     min-width: 0;
-    overflow-x: hidden;
 }
 
 /* ===== About Section ===== */
@@ -534,14 +533,14 @@ section[id] {
     color: var(--text-secondary);
     text-align: right;
     margin: 0;
-    max-width: 12ch;
+    max-width: 100%;
 }
 .about-short {
     color: var(--text-secondary);
     line-height: 1.6;
     font-size: 0.9rem;
     text-align: right;
-    max-width: 26ch;
+    max-width: 100%;
     margin: 0;
 }
 .about-block {
