@@ -501,3 +501,16 @@
         footerObserver.observe(footerBottom);
     }
 })();
+
+function syncBackToTopAlignment() {
+    const navContainer = document.querySelector('.nav-container');
+    if (!navContainer || !backToTop) return;
+
+    const rect = navContainer.getBoundingClientRect();
+    const rightInset = window.innerWidth - rect.right;
+
+    backToTop.style.setProperty('--back-to-top-right', `${rightInset}px`);
+}
+
+window.addEventListener('load', syncBackToTopAlignment);
+window.addEventListener('resize', syncBackToTopAlignment);
