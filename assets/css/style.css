@@ -1579,7 +1579,7 @@ section[id] {
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    right: var(--back-to-top-right, 20px); 
+    right: calc(var(--back-to-top-right, 20px) + 20px);
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -1610,7 +1610,7 @@ section[id] {
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 20px;
-        right: var(--back-to-top-right, 20px);
+        right: calc(var(--back-to-top-right, 20px) + 20px);
         width: 40px;
         height: 40px;
     }
