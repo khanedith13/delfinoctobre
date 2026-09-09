@@ -165,14 +165,14 @@ body {
 .hamburger.is-active .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-menu {
         display: none;
         position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
-        background: #000000; 
+        background: #000000;
         backdrop-filter: none;
         flex-direction: column;
         gap: 0;
