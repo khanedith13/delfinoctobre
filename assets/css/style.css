@@ -75,6 +75,7 @@ body {
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 .nav-logo-img {
     width: 40px;
@@ -87,6 +88,7 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-primary);
+    white-space: nowrap;
 }
 .nav-menu {
     display: flex;
