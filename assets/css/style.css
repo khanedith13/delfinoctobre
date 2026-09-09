@@ -387,7 +387,11 @@ body {
     width: fit-content;
     margin: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .container,
+    .hero-container {
+        padding: 0 16px;
+    }
     .hero {
         min-height: auto;
         padding: 60px 0 40px;
@@ -413,6 +417,9 @@ body {
         display: block;
         width: 100%;
     }
+    .hero-text h2 {
+        text-align: center;
+    }
     .hero-text p {
         font-size: clamp(0.9rem, 3.5vw, 1rem);
         line-height: 1.55;
@@ -434,6 +441,7 @@ body {
         white-space: nowrap;
         padding: 13px 16px;
         font-size: 0.9rem;
+        width: 100%;
     }
     .profile-img {
         width: clamp(120px, 35vw, 160px);
@@ -447,20 +455,6 @@ body {
     .status-indicator {
         font-size: 0.85rem;
         padding: 6px 14px;
-    }
-}
-@media (max-width: 380px) {
-    .hero-actions .btn {
-        width: 100%;
-        justify-content: center;
-        padding: 13px 24px;
-    }
-    .hero-text h1 {
-        font-size: 1.6rem;
-    }
-    .container,
-    .hero-container {
-        padding: 0 16px;
     }
 }
 
@@ -1483,7 +1477,7 @@ section[id] {
     color: var(--accent-color);
     text-decoration: underline;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .footer-details {
         align-items: flex-start; 
         margin-left: auto;
@@ -1607,7 +1601,7 @@ section[id] {
     color: #000;
     border-color: var(--accent-color);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .back-to-top {
         bottom: 20px;
         right: calc(var(--back-to-top-right, 20px) + 20px);
