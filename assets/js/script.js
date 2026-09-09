@@ -448,17 +448,19 @@
     }
 
     if (footerBottom && footerBottomInner) {
-        let isInFooter = false; 
-
+        let isInFooter = false;
+    
         const footerObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
                     const shouldBeInFooter = entry.isIntersecting;
-        
+    
                     if (shouldBeInFooter === isInFooter) return;
-        
+    
                     isInFooter = shouldBeInFooter;
-        
+    
+                    const firstRect = backToTop.getBoundingClientRect();
+    
                     if (isInFooter) {
                         backToTop.classList.add('in-footer', 'is-visible');
                         footerBottomInner.appendChild(backToTop);
@@ -466,14 +468,49 @@
                         backToTop.classList.remove('in-footer');
                         document.body.appendChild(backToTop);
                     }
+    
+                    const lastRect = backToTop.getBoundingClientRect();
+                    const deltaX = firstRect.left - lastRect.left;
+                    const deltaY = firstRect.top - lastRect.top;
+    
+                    backToTop.style.transition = 'none';
+                    backToTop.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+    
+                    backToTop.offsetHeight; // force reflow
+    
+                    backToTop.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                    backToTop.style.transform = 'translate(0, 0)';
+
+                    backToTop.addEventListener(
+                        'transitionend',
+                        function cleanup() {
+                            backToTop.style.transform = '';
+                            backToTop.style.transition = '';
+                            backToTop.removeEventListener('transitionend', cleanup);
+                        },
+                        { once: true }
+                    );
                 });
             },
             {
                 threshold: 0,
-                rootMargin: '0px 0px 0px 0px' 
+                rootMargin: '0px 0px 0px 0px'
             }
         );
-
+    
         footerObserver.observe(footerBottom);
     }
 })();
+
+function syncBackToTopAlignment() {
+    const navContainer = document.querySelector('.nav-container');
+    if (!navContainer || !backToTop) return;
+
+    const rect = navContainer.getBoundingClientRect();
+    const rightInset = window.innerWidth - rect.right;
+
+    backToTop.style.setProperty('--back-to-top-right', `${rightInset}px`);
+}
+
+window.addEventListener('load', syncBackToTopAlignment);
+window.addEventListener('resize', syncBackToTopAlignment);

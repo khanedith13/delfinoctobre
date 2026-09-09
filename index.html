@@ -93,25 +93,6 @@
         <!-- Two-column layout: sticky profile card + scrollable content -->
         <div class="portfolio-layout container">
 
-            <!-- LEFT ~25% : sticky at-a-glance card -->
-            <aside class="profile-card">
-                <img src="/assets/images/profile/profile.png" alt="Delfin G. Octobre" class="profile-card-img">
-            
-                <div class="profile-card-details">
-                    <h3 class="profile-card-name">Delfin G. Octobre</h3>
-                    <p class="profile-card-role">Aspiring Full Stack Software Developer</p>
-                    <ul class="profile-card-facts">
-                        <li><i class="bi bi-briefcase"></i> Open to Junior/Mid Roles</li>
-                        <li><i class="bi bi-mortarboard"></i> A.C.T. - Software Development</li>
-                        <li><i class="bi bi-geo-alt"></i> Cebu City, Philippines</li>
-                    </ul>
-                </div>
-                <div class="profile-card-actions">
-                    <a href="#contact" class="btn primary profile-card-btn">Contact Me</a>
-                    <a href="/assets/documents/Delfin_G_Octobre_Resume.pdf" target="_blank" class="btn secondary profile-card-btn">Download Resume</a>
-                </div>
-            </aside>
-
             <!-- RIGHT ~75% : all scrollable content sections live in here -->
             <div class="content">
 
@@ -453,6 +434,17 @@
                             <!-- LEFT/CENTER: certificate cards -->
                             <div class="certificates-details">
                                 <div class="certificate-card"
+                                    data-title="Responsive Web Design"
+                                    data-issuer="freeCodeCamp"
+                                    data-date="2026"
+                                    data-image="/assets/images/certificates/responsive-web-design.png">
+                                    <img src="/assets/images/certificates/responsive-web-design.png" alt="Responsive Web Design Certificate" class="certificate-card-img">
+                                    <div class="certificate-card-body">
+                                        <h4 class="certificate-card-title">Responsive Web Design</h4>
+                                        <p class="certificate-card-meta">freeCodeCamp &middot; 2026</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-card"
                                     data-title="Datawords Quality Assurance Training"
                                     data-issuer="Datawords Philippines - Cebu"
                                     data-date="2026"
@@ -569,9 +561,7 @@
                                         <button type="submit" class="btn primary contact-submit-btn">
                                             <i class="bi bi-send"></i> Send Message
                                         </button>
-                                        <p>
-                                            <i class="bi bi-envelope"></i> octobredelfin13@gmail.com
-                                        </p>
+                                        <a href="/assets/documents/Delfin_G_Octobre_Resume.pdf" target="_blank" class="btn secondary">Download Resume</a>
                                     </div>
                                     <p class="form-status" id="formStatus"></p>
                                 </form>

@@ -75,6 +75,7 @@ body {
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 .nav-logo-img {
     width: 40px;
@@ -87,6 +88,7 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-primary);
+    white-space: nowrap;
 }
 .nav-menu {
     display: flex;
@@ -163,14 +165,14 @@ body {
 .hamburger.is-active .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-menu {
         display: none;
         position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
-        background: #000000; 
+        background: #000000;
         backdrop-filter: none;
         flex-direction: column;
         gap: 0;
@@ -385,7 +387,11 @@ body {
     width: fit-content;
     margin: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .container,
+    .hero-container {
+        padding: 0 16px;
+    }
     .hero {
         min-height: auto;
         padding: 60px 0 40px;
@@ -411,6 +417,9 @@ body {
         display: block;
         width: 100%;
     }
+    .hero-text h2 {
+        text-align: center;
+    }
     .hero-text p {
         font-size: clamp(0.9rem, 3.5vw, 1rem);
         line-height: 1.55;
@@ -432,6 +441,7 @@ body {
         white-space: nowrap;
         padding: 13px 16px;
         font-size: 0.9rem;
+        width: 100%;
     }
     .profile-img {
         width: clamp(120px, 35vw, 160px);
@@ -445,20 +455,6 @@ body {
     .status-indicator {
         font-size: 0.85rem;
         padding: 6px 14px;
-    }
-}
-@media (max-width: 380px) {
-    .hero-actions .btn {
-        width: 100%;
-        justify-content: center;
-        padding: 13px 24px;
-    }
-    .hero-text h1 {
-        font-size: 1.6rem;
-    }
-    .container,
-    .hero-container {
-        padding: 0 16px;
     }
 }
 
@@ -478,155 +474,9 @@ section[id] {
 }
 
 /* ===== Two-column portfolio layout ===== */
-.portfolio-layout {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    gap: 40px;
-    align-items: start;
-    padding-top: 40px;
-}
-
-/* Content Wrapper  */
+.portfolio-layout,
 .content {
     min-width: 0;
-}
-
-/* Sticky profile card */
-.profile-card {
-    position: sticky;
-    top: 100px;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 30px 24px;
-    backdrop-filter: blur(12px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 14px;
-    transition: top 0.4s ease, transform 0.4s ease;
-}
-.profile-card.is-centered {
-    top: 50vh;
-    transform: translateY(-50%);
-}
-.profile-card-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--accent-color);
-}
-.profile-card-name {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--text-primary);
-}
-.profile-card-role {
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    margin-top: -8px;
-}
-.profile-card-facts {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    text-align: left;
-    padding: 16px 0;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
-.profile-card-facts li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.profile-card-facts i {
-    color: var(--accent-color);
-}
-.profile-card-btn {
-    width: 100%;
-    justify-content: center;
-}
-.profile-card-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-}
-.profile-card-details {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-.profile-card-name,
-.profile-card-role {
-    margin: 0;
-}
-@media (max-width: 900px) {
-    .portfolio-layout {
-        display: flex;
-        flex-direction: column;
-    }
-    .content {
-        order: 1;
-    }
-    .profile-card {
-        order: 2;
-        position: static;
-        top: auto;
-        max-width: 480px;
-        margin: 0 auto;
-        width: 100%;
-    }
-}
-@media (max-width: 900px) {
-    .profile-card {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-areas:
-            "img details"
-            "actions actions";
-        align-items: center;
-        column-gap: 18px;
-        row-gap: 20px;
-        text-align: left;
-        padding: 24px 20px;
-    }
-    .profile-card-img {
-        grid-area: img;
-        width: 80px;
-        height: 80px;
-    }
-    .profile-card-details {
-        grid-area: details;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-    .profile-card-name {
-        font-size: 1rem;
-    }
-    .profile-card-role {
-        margin-top: 0;
-        font-size: 0.85rem;
-    }
-    .profile-card-facts {
-        text-align: left;
-        font-size: 0.8rem;
-        padding: 10px 0 0;
-        margin-top: 4px;
-        border-top: 1px solid var(--border-color);
-        border-bottom: none; 
-    }
-    .profile-card-actions {
-        grid-area: actions;
-    }
 }
 
 /* ===== About Section ===== */
@@ -679,14 +529,14 @@ section[id] {
     color: var(--text-secondary);
     text-align: right;
     margin: 0;
-    max-width: 12ch;
+    max-width: 100%;
 }
 .about-short {
     color: var(--text-secondary);
     line-height: 1.6;
     font-size: 0.9rem;
     text-align: right;
-    max-width: 26ch;
+    max-width: 100%;
     margin: 0;
 }
 .about-block {
@@ -1627,7 +1477,7 @@ section[id] {
     color: var(--accent-color);
     text-decoration: underline;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .footer-details {
         align-items: flex-start; 
         margin-left: auto;
@@ -1723,7 +1573,7 @@ section[id] {
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: calc(var(--back-to-top-right, 20px) + 20px);
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -1751,10 +1601,10 @@ section[id] {
     color: #000;
     border-color: var(--accent-color);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .back-to-top {
         bottom: 20px;
-        right: 20px;
+        right: calc(var(--back-to-top-right, 20px) + 20px);
         width: 40px;
         height: 40px;
     }
