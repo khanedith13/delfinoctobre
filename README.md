@@ -42,7 +42,7 @@ the technologies I'm learning, and my journey towards becoming a **Full Stack So
 
 ## 👨‍💻 Author
 
-**Delfin G. Octobre** | **khanedith13**
+**Delfin G. Octobre**
 
 Aspiring Full Stack Software Developer
 
