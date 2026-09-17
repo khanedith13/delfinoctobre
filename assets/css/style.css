@@ -1560,12 +1560,6 @@ section[id] {
     gap: 16px;
     padding: 20px;
 }
-.back-to-top.in-footer {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-}
 .footer-bottom-inner p {
     color: var(--text-secondary);
     font-size: 0.85rem;
@@ -1603,7 +1597,7 @@ section[id] {
 }
 @media (max-width: 900px) {
     .back-to-top {
-        bottom: 20px;
+        bottom: 90px; /* was 20px */
         right: calc(var(--back-to-top-right, 20px) + 20px);
         width: 40px;
         height: 40px;
