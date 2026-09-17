@@ -1603,7 +1603,7 @@ section[id] {
 }
 @media (max-width: 900px) {
     .back-to-top {
-        bottom: 20px;
+        bottom: 90px; /* was 20px */
         right: calc(var(--back-to-top-right, 20px) + 20px);
         width: 40px;
         height: 40px;
