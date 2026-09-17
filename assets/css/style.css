@@ -1560,12 +1560,6 @@ section[id] {
     gap: 16px;
     padding: 20px;
 }
-.back-to-top.in-footer {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-}
 .footer-bottom-inner p {
     color: var(--text-secondary);
     font-size: 0.85rem;
