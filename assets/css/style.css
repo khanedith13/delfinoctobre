@@ -1595,7 +1595,7 @@ section[id] {
     color: #000;
     border-color: var(--accent-color);
 }
-@media (max-width: 900px) {
+@media (max-width: 1330px) {
     .back-to-top {
         bottom: 90px; /* was 20px */
         right: calc(var(--back-to-top-right, 20px) + 20px);
