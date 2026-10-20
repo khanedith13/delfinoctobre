@@ -460,3 +460,34 @@ function syncBackToTopAlignment() {
 
 window.addEventListener('load', syncBackToTopAlignment);
 window.addEventListener('resize', syncBackToTopAlignment);
+
+(function () {
+    const sections = document.querySelectorAll('.content > section');
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    document.documentElement.classList.add('js-reveal');
+
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                const section = entry.target;
+
+                if (entry.isIntersecting) {
+                    section.classList.add('in-view');
+                    section.classList.remove('is-above');
+                } else {
+                    section.classList.remove('in-view');
+                    section.classList.toggle('is-above', entry.boundingClientRect.top < 0);
+                }
+            });
+        },
+        {
+            rootMargin: '-12% 0px -12% 0px',
+            threshold: 0
+        }
+    );
+
+    sections.forEach(section => revealObserver.observe(section));
+})();
