@@ -46,31 +46,32 @@ export type Profile = {
 }
 
 export const profile: Profile = {
-  name: 'Your Name',
-  firstName: 'Your Name',
-  handle: '@yourhandle',
-  role: 'PLACEHOLDER - your title',
-  avatarSrc: '/avatar.svg',
-  verifiedLabel: 'PLACEHOLDER - what the tick means (e.g. a certification)',
-  email: 'you@example.com',
-  location: 'PLACEHOLDER - your city or timezone',
+  name: 'Delfin Octobre',
+  firstName: 'Delfin',
+  handle: '@khanedith13',
+  role: 'Aspiring Full Stack Developer',
+  avatarSrc: '/profile.png',
+  verifiedLabel: 'developer',
+  email: 'octobredelfin13.com',
+  location: 'Cebu City, Philippines',
   // Pick any icon from https://phosphoricons.com and import it above.
   stats: [
-    { value: '0 yrs', label: 'PLACEHOLDER', Icon: Briefcase },
-    { value: '#000', label: 'PLACEHOLDER', Icon: SealCheck },
-    { value: 'GMT+0', label: 'PLACEHOLDER', Icon: Clock },
+    { value: '2 yrs', label: 'Experince', Icon: Briefcase },
+    { value: '#007', label: 'Certificates', Icon: SealCheck },
+    { value: 'GMT+8', label: 'TimeZone', Icon: Clock },
   ],
   // The intro types this line, then flies it into the Home headline.
   // Keep it short: two halves, 5-8 words total.
-  displayName: { line1: 'Your headline here.', line2: 'Keep it short.' },
+  displayName: { line1: 'Transforming Ideas.', line2: 'Creating Impact.' },
   hero: {
-    body: 'PLACEHOLDER - one line on what you do and who you do it for.',
-    portraitSrc: '/avatar.svg',
+    body: 'Building Digital Solutions for Clients and Businesses.',
+    portraitSrc: '/profile.png',
     portraitAlt: 'Portrait placeholder',
   },
   socials: [
-    { label: 'Facebook profile', href: '#', iconPath: '/icons/facebook.svg' },
-    { label: 'LinkedIn profile', href: '#', iconPath: '/icons/linkedin.svg' },
-    { label: 'Discord profile', href: '#', iconPath: '/icons/discord.svg' },
+    { label: 'Facebook profile', href: 'https://www.facebook.com/khanedith13', iconPath: '/icons/facebook.svg' },
+    { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/octobredelfin13/', iconPath: '/icons/linkedin.svg' },
+    { label: 'Discord profile', href: 'https://discord.com/channels/@khanedith13', iconPath: '/icons/discord.svg' },
+    { label: 'Github profile', href: 'https://github.com/khanedith13', iconPath: '/icons/github.svg' },
   ],
 }
