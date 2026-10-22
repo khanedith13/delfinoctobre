@@ -1630,3 +1630,18 @@ section[id] {
         text-align: center;
     }
 }
+
+/* ===== Section Reveal Animation ===== */
+html.js-reveal .content > section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease,
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.js-reveal .content > section.is-above {
+    transform: translateY(-40px);
+}
+html.js-reveal .content > section.in-view {
+    opacity: 1;
+    transform: none;
+}
