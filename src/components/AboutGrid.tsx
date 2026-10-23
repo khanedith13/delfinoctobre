@@ -85,7 +85,7 @@ export default function AboutGrid() {
             Turning ideas into impactful digital solutions 
             <span> with modern design and smarter technologies.</span>
           </p>
-          
+
           <ul className="agrid__caps" role="list">
             {CAPABILITIES.map((c) => (
               <li key={c.index} className="agrid__cap">
@@ -112,11 +112,11 @@ export default function AboutGrid() {
           <div className="agrid__bar">
             <span className="agrid__cell">
               <span className="agrid__cell-mark agrid__cell-mark--img">
-                <img src="/placeholders/badge.svg" alt="" loading="lazy" decoding="async" />
+                <img src="/placeholders/usjr.png" alt="" loading="lazy" decoding="async" />
               </span>
               <span className="agrid__cell-copy">
-                <span className="agrid__cell-title">Credential name</span>
-                <span className="agrid__cell-meta">Credential ID</span>
+                <span className="agrid__cell-title">Associate in Computer Technology — Software Development</span>
+                <span className="agrid__cell-meta">University of San Jose-Recoletos · 2027</span>
               </span>
             </span>
 
@@ -126,17 +126,17 @@ export default function AboutGrid() {
               </span>
               <span className="agrid__cell-copy">
                 <span className="agrid__cell-title">{profile.location}</span>
-                <span className="agrid__cell-meta">Timezone · working hours</span>
+                <span className="agrid__cell-meta">GMT+8 · 9AM-9PM</span>
               </span>
             </span>
 
-            <a className="agrid__cell agrid__cell--wide" href="#">
+            <a className="agrid__cell agrid__cell--wide" href="https://www.passerellesnumeriques.org/what-we-do/philippines/" target="_blank" rel="noopener noreferrer">
               <span className="agrid__cell-mark agrid__cell-mark--plain">
-                <img src="/placeholders/logo.svg" alt="" loading="lazy" decoding="async" />
+                <img src="/placeholders/pnph.png" alt="" loading="lazy" decoding="async" />
               </span>
               <span className="agrid__cell-copy">
-                <span className="agrid__cell-title">Community or affiliation</span>
-                <span className="agrid__cell-meta">Your role there</span>
+                <span className="agrid__cell-title">Passerelles Numériques Philippines | Class 2027</span>
+                <span className="agrid__cell-meta">Student Body Organization - President</span>
               </span>
               <ArrowUpRight className="agrid__cell-go" size={15} weight="bold" aria-hidden="true" />
             </a>
@@ -145,7 +145,7 @@ export default function AboutGrid() {
 
         <div className="agrid__portrait">
           <img
-            src="/avatar.svg"
+            src="/profile.png"
             alt="Portrait placeholder"
             loading="eager"
             decoding="async"
