@@ -2,18 +2,6 @@ import type { CSSProperties } from 'react'
 import { ArrowUpRight, MapPin } from '@/components/slab'
 import { profile } from '@/data/profile'
 
-/**
- * AboutGrid - the About view as a fixed viewport.
- *
- * One glass sheet, two columns: who you are on the left, the illustration
- * on the right. Sized to the panel, so nothing here scrolls.
- *
- * The left column is a ladder, not a paragraph block: one display statement,
- * one line of context, then the four things you do - each carrying the marks
- * of the tools it is built with. The tools are the proof, so they are the
- * visual. Swap the marks below for your own (any square SVG/PNG in public/).
- */
-
 const N8N = { src: '/icons/ai/n8n.svg', name: 'n8n' }
 const ZAPIER = { src: '/icons/ai/zapier.svg', name: 'Zapier' }
 const DOCKER = { src: '/icons/ai/docker.svg', name: 'Docker' }
