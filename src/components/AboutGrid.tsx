@@ -26,6 +26,12 @@ const SALTCORN = { src: '/icons/ai/saltcorn.png', name: 'SALTCORN' }
 const NOCOBASE = { src: '/icons/ai/nocobase.png', name: 'NOCOBASE' }
 const N8N = { src: '/icons/ai/n8n.png', name: 'N8N' }
 
+const JUPYTERNOTEBOOK = { src: '/icons/ai/jupyter.png', name: 'JUPYTER NOTEBOOK' }
+const PANDAS = { src: '/icons/ai/pandas.png', name: 'PANDAS' }
+const STREAMLIT = { src: '/icons/ai/streamlit.png', name: 'STREAMLIT' }
+const SCIKITLEARN = { src: '/icons/ai/scikit-learn.png', name: 'SCIKIT-LEARN' }
+const TENSORFLOW = { src: '/icons/ai/tensorflow.png', name: 'TENSORFLOW' }
+
 type Capability = {
   index: string
   title: string
@@ -52,6 +58,11 @@ const CAPABILITIES: Capability[] = [
     index: '04',
     title: 'Low Code / No Code and Automation',
     marks: [APPSMITH, BUDIBASE, SALTCORN, NOCOBASE, N8N],
+  },
+  {
+    index: '05',
+    title: 'Data Science and Machine Learning',
+    marks: [JUPYTERNOTEBOOK, PANDAS, STREAMLIT, SCIKITLEARN, TENSORFLOW],
   },
 ]
 
