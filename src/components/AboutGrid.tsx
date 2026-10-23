@@ -14,6 +14,12 @@ const BOOTSTRAP = { src: '/icons/ai/bootstrap.png', name: 'BOOTSTRAP' }
 const JAVASCRIPT = { src: '/icons/ai/javascript.png', name: 'JAVASCRIPT' }
 const REACT = { src: '/icons/ai/react.png', name: 'REACT' }
 
+const LARAVEL = { src: '/icons/ai/laravel.png', name: 'LARAVEL' }
+const MYSQL = { src: '/icons/ai/mysql.png', name: 'MYSQL' }
+const NGINX = { src: '/icons/ai/nginx.png', name: 'NGINX' }
+const APACHE = { src: '/icons/ai/apache.png', name: 'APACHE' }
+const SUPABASE = { src: '/icons/ai/supabase.png', name: 'SUPABASE' }
+
 type Capability = {
   index: string
   title: string
@@ -30,6 +36,11 @@ const CAPABILITIES: Capability[] = [
     index: '02',
     title: 'Front End Development',
     marks: [HTML, CSS, BOOTSTRAP, JAVASCRIPT, REACT],
+  },
+  {
+    index: '03',
+    title: 'Back End and Database',
+    marks: [LARAVEL, MYSQL, NGINX, APACHE, SUPABASE],
   },
 ]
 
