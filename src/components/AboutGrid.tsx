@@ -72,10 +72,10 @@ export default function AboutGrid() {
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">About</span>
         <h1 className="pgrid__title" id="about-title">
-          {`Hi, I’m ${profile.firstName}.`}
+          {`Hi, I'm ${profile.firstName}.`}
         </h1>
         <p className="pgrid__lede">
-          PLACEHOLDER - tell me what to put here: one line on what you do.
+        I Build Digital Solutions for Clients and Businesses.
         </p>
       </header>
 
