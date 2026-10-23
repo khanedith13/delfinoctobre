@@ -2,7 +2,11 @@ import type { CSSProperties } from 'react'
 import { ArrowUpRight, MapPin } from '@/components/slab'
 import { profile } from '@/data/profile'
 
-const N8N = { src: '/icons/ai/n8n.svg', name: 'n8n' }
+const C = { src: '/icons/ai/c.png', name: 'C' }
+const CSHARP = { src: '/icons/ai/csharp.png', name: 'CSHARP' }
+const JAVA = { src: '/icons/ai/java.png', name: 'JAVA' }
+const PHP = { src: '/icons/ai/php.png', name: 'PHP' }
+const PYTHON = { src: '/icons/ai/python.png', name: 'PYTHON' }
 
 type Capability = {
   index: string
@@ -13,8 +17,8 @@ type Capability = {
 const CAPABILITIES: Capability[] = [
   {
     index: '01',
-    title: 'Your role 1',
-    marks: [N8N],
+    title: 'Programming Languages',
+    marks: [C, CSHARP, JAVA, PHP, PYTHON],
   },
 ]
 
