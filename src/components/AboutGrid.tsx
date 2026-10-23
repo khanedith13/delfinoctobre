@@ -8,6 +8,12 @@ const JAVA = { src: '/icons/ai/java.png', name: 'JAVA' }
 const PHP = { src: '/icons/ai/php.png', name: 'PHP' }
 const PYTHON = { src: '/icons/ai/python.png', name: 'PYTHON' }
 
+const HTML = { src: '/icons/ai/html.png', name: 'HTML' }
+const CSS = { src: '/icons/ai/css.png', name: 'CSS' }
+const BOOTSTRAP = { src: '/icons/ai/bootstrap.png', name: 'BOOTSTRAP' }
+const JAVASCRIPT = { src: '/icons/ai/javascript.png', name: 'JAVASCRIPT' }
+const REACT = { src: '/icons/ai/react.png', name: 'REACT' }
+
 type Capability = {
   index: string
   title: string
@@ -19,6 +25,11 @@ const CAPABILITIES: Capability[] = [
     index: '01',
     title: 'Programming Languages',
     marks: [C, CSHARP, JAVA, PHP, PYTHON],
+  },
+  {
+    index: '02',
+    title: 'Front End Development',
+    marks: [HTML, CSS, BOOTSTRAP, JAVASCRIPT, REACT],
   },
 ]
 
