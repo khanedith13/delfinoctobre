@@ -20,6 +20,12 @@ const NGINX = { src: '/icons/ai/nginx.png', name: 'NGINX' }
 const APACHE = { src: '/icons/ai/apache.png', name: 'APACHE' }
 const SUPABASE = { src: '/icons/ai/supabase.png', name: 'SUPABASE' }
 
+const APPSMITH = { src: '/icons/ai/appsmith.png', name: 'APPSMITH' }
+const BUDIBASE = { src: '/icons/ai/budibase.png', name: 'BUDIBASE' }
+const SALTCORN = { src: '/icons/ai/saltcorn.png', name: 'SALTCORN' }
+const NOCOBASE = { src: '/icons/ai/nocobase.png', name: 'NOCOBASE' }
+const N8N = { src: '/icons/ai/n8n.png', name: 'N8N' }
+
 type Capability = {
   index: string
   title: string
@@ -41,6 +47,11 @@ const CAPABILITIES: Capability[] = [
     index: '03',
     title: 'Back End and Database',
     marks: [LARAVEL, MYSQL, NGINX, APACHE, SUPABASE],
+  },
+  {
+    index: '04',
+    title: 'Low Code / No Code and Automation',
+    marks: [APPSMITH, BUDIBASE, SALTCORN, NOCOBASE, N8N],
   },
 ]
 
