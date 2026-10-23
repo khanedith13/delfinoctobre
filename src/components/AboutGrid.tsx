@@ -82,19 +82,10 @@ export default function AboutGrid() {
       <div className="home__glass agrid__glass">
         <div className="agrid__copy">
           <p className="agrid__lead">
-            Your big statement goes here, in one or two lines.
-            <span> A softer second half that finishes the thought.</span>
+            Turning ideas into impactful digital solutions 
+            <span> with modern design and smarter technologies.</span>
           </p>
-
-          <p className="agrid__note">
-            <strong>Your company name</strong>, and{' '}
-            <a className="agrid__link" href="#">
-              your product
-            </a>{' '}
-            - PLACEHOLDER - tell me what to put here: two sentences on your company, what
-            you sell or build, and who it is for.
-          </p>
-
+          
           <ul className="agrid__caps" role="list">
             {CAPABILITIES.map((c) => (
               <li key={c.index} className="agrid__cap">
