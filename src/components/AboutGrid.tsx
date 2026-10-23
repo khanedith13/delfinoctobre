@@ -14,22 +14,7 @@ const CAPABILITIES: Capability[] = [
   {
     index: '01',
     title: 'Your role 1',
-    marks: [N8N, ZAPIER, DOCKER],
-  },
-  {
-    index: '02',
-    title: 'Your role 2',
-    marks: [CLAUDE, CODEX, GLM, QWEN, HERMES],
-  },
-  {
-    index: '03',
-    title: 'Your role 3',
-    marks: [CLAUDE, CODEX, NAMECHEAP, CLOUDFLARE, GITHUB],
-  },
-  {
-    index: '04',
-    title: 'Your role 4',
-    marks: [GWS, SLACK, FIREFLIES],
+    marks: [N8N],
   },
 ]
 
