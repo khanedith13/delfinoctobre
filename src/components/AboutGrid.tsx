@@ -13,7 +13,6 @@ const HERMES = { src: '/icons/ai/hermes.svg', name: 'Hermes' }
 const NAMECHEAP = { src: '/icons/ai/namecheap.svg', name: 'Namecheap' }
 const CLOUDFLARE = { src: '/icons/ai/cloudflare.svg', name: 'Cloudflare' }
 const GITHUB = { src: '/icons/ai/github.svg', name: 'GitHub' }
-const GWS = { src: '/icons/googleworkspace.svg', name: 'Google Workspace' }
 const SLACK = { src: '/icons/ai/slack-color.svg', name: 'Slack' }
 const FIREFLIES = { src: '/icons/ai/fireflies.png', name: 'Fireflies' }
 
