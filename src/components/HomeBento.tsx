@@ -86,8 +86,8 @@ export default function HomeBento() {
   return (
     <nav className="bento" aria-label="Explore the portfolio">
       {/* Projects: the funnel thumbnails drift upward on a looped track. */}
-      <Link to="/projects" className="bento__card bento__card--projects">
-        <CardHead Icon={FolderOpen} title="Projects" desc="Web and Custom Softwares" />
+      <Link to="/showcase" className="bento__card bento__card--projects">
+        <CardHead Icon={FolderOpen} title="Showcase" desc="Built. Tested. Delivered." />
         <div className="bento__media bento__reel" aria-hidden="true">
           <div className="bento__reel-track">
             {[...PROJECT_SHOTS, ...PROJECT_SHOTS].map((f, i) => (
@@ -113,8 +113,8 @@ export default function HomeBento() {
 
       {/* AI builds: the systems from the Projects tree, two chip rows
           scrolling against each other. */}
-      <Link to="/showcase" className="bento__card bento__card--ai">
-        <CardHead Icon={Robot} title="Showcase" desc="Built. Tested. Delivered." />
+      <Link to="/projects" className="bento__card bento__card--ai">
+        <CardHead Icon={Robot} title="Projects" desc="Web and Custom Softwares" />
         <div className="bento__media bento__chips" aria-hidden="true">
           {toolRows.map((row, r) => (
             <div key={r} className="bento__chip-row" data-dir={r ? 'right' : 'left'}>
