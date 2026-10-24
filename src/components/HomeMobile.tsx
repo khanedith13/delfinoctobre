@@ -47,7 +47,7 @@ export function HomeStats() {
 }
 
 const TILES = [
-  { n: '01', label: 'Projects', to: '/projects', title: 'Featured Projects', desc: 'Ideas Into Reality', img: '/placeholders/project-1.jpg' },
+  { n: '01', label: 'Projects', to: '/projects', title: 'Featured Projects', desc: 'Ideas Into Reality', img: '/placeholders/project-1.png' },
   { n: '02', label: 'Services', to: '/services', title: 'Services I Offer', desc: 'Solutions That Deliver', Icon: Stack },
   { n: '03', label: 'Showcase', to: '/showcase', title: 'Turning Ideas Into Working Solutions', desc: 'Innovation In Action', Icon: Coffee, accent: true },
   { n: '04', label: 'Testimonials', to: '/testimonials', title: 'What People Say', desc: 'Trust Through Results', img: '/placeholders/testimonial-1.jpg' },
