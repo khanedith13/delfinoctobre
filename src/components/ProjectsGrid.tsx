@@ -249,49 +249,27 @@ export default function ProjectsGrid() {
 
   const stack = builds.length > 0 ? (
     <div className="bento__stack">
-
         {builds.map((b) => (
-
           <button
-
             key={b.id}
-
             type="button"
-
             className="bento__card bento__card--btn bento__card--build"
-
             onClick={(e) => show(b, e.currentTarget)}
-
             aria-haspopup="dialog"
-
           >
-
             <span className="bento__build-plate">
-
               {b.logos?.length ? <img src={b.logos[0]} alt="" width={22} height={22} /> : <b.Icon />}
-
             </span>
-
             <span className="bento__build-text">
-
               <span className="bento__kicker">{b.kicker}</span>
-
               <span className="bento__build-title">{b.title}</span>
-
               <span className="bento__build-desc">{b.desc}</span>
-
             </span>
-
             <span className="bento__build-arrow">
-
               <ArrowUpRight size={13} weight="bold" aria-hidden="true" />
-
             </span>
-
           </button>
-
         ))}
-
       </div>
   ) : null
 
