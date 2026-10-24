@@ -95,8 +95,8 @@ export function HomeExplore() {
           <span className="hproof__dur" aria-hidden="true">0:00</span>
         </span>
         <span className="hproof__copy">
-          <span className="hproof__title">PLACEHOLDER - tell me what to put here: a one-line teaser for your best testimonial.</span>
-          <span className="hproof__meta">PLACEHOLDER - client role</span>
+          <span className="hproof__title">Discover how my digital solutions help turn ideas into practical, effective results.</span>
+          <span className="hproof__meta">Project Collaborator</span>
         </span>
       </Link>
     </>
