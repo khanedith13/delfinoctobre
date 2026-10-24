@@ -38,6 +38,15 @@ type Tool = {
 }
 
 export const tools: Tool[] = [
+  { name: 'VS Code',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'git',          iconPath: '/icons/git.png' },
+  { name: 'Github',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'npm',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'Vercel',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'Figma',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'Laragon',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'Docker',          iconPath: '/icons/claude-code-logo.png' },
+  { name: 'Postman',          iconPath: '/icons/claude-code-logo.png' },
   { name: 'Claude Code',          iconPath: '/icons/claude-code-logo.png' },
 ]
 
