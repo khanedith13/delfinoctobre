@@ -133,10 +133,7 @@
   flex-direction: column;
   gap: 10px;
   animation: bento-drift-up 22s linear infinite;
-  animation-play-state: paused;
 }
-/* Still until pointed at: three tracks drifting at once gave the eye nothing to land on. */
-.bento__card:hover .bento__reel-track { animation-play-state: running; }
 /* Each shot is a small browser window: a chrome bar with three dots over the
    top of the page, so the crop reads as a screen, not a zoomed photo. */
 .bento__shot {
@@ -369,9 +366,7 @@
   flex-direction: column;
   gap: 10px;
   animation: bento-drift-up 20s linear infinite;
-  animation-play-state: paused;
 }
-.bento__card:hover .bento__reviews-track { animation-play-state: running; }
 .bento__review {
   display: flex;
   flex-direction: column;
