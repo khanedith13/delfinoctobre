@@ -43,9 +43,9 @@ const OFFERS = [
 ] as const
 
 const CLIENTS = [
-  { name: 'Client Name 1', role: 'PLACEHOLDER - your role for them', work: 'Tag · Tag · Tag', logo: '/placeholders/logo.svg' },
-  { name: 'Client Name 2', role: 'PLACEHOLDER - your role for them', work: 'Tag · Tag · Tag', logo: '/placeholders/logo.svg' },
-  { name: 'Client Name 3', role: 'PLACEHOLDER - your role for them', work: 'Tag · Tag · Tag' },
+  { name: 'Ongoing ', role: 'Software Developer', work: '', logo: '/placeholders/logo.svg' },
+  { name: 'Ongoing ', role: 'Software Developer', work: '', logo: '/placeholders/logo.svg' },
+  { name: 'Ongoing', role: 'Software Developer', work: '', logo: '/placeholders/logo.svg'  },
 ]
 
 // Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
