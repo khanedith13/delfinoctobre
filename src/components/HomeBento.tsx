@@ -15,7 +15,7 @@ import {
   AppWindow,
   SealCheck,
 } from '@/components/slab'
-import { gymFunnel, bookingFunnel, websiteFunnel, type Funnel } from '@/data/funnels'
+/**import { gymFunnel, bookingFunnel, websiteFunnel, type Funnel } from '@/data/funnels'*/
 import { aiStack, type StackNode } from '@/data/ai-stack'
 import { profile } from '@/data/profile'
 
@@ -57,7 +57,11 @@ const CLIENTS = [
 ]
 
 // Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
-const PHOTOS = [profile.avatarSrc, '/profile.png?2', '/profile.png?3']
+const PHOTOS = [
+  '/photo-1.png',
+  '/photo-2.png',
+  '/photo-3.png',
+]
 
 /** The AI systems as a flat list: every leaf of the Projects tree, in order. */
 const leaves = (n: StackNode): StackNode[] =>
