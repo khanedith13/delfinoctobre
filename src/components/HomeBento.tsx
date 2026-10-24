@@ -60,7 +60,7 @@ const CLIENTS = [
 const PHOTOS = [
   '/photo-1.png',
   '/photo-2.png',
-  '/photo-3.png',
+  '/profile.png',
 ]
 
 /** The AI systems as a flat list: every leaf of the Projects tree, in order. */
