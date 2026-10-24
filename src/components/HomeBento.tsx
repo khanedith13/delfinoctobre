@@ -140,7 +140,7 @@ export default function HomeBento() {
           </span>
           <span className="bento__badge-tag">
             <SealCheck size={14} weight="fill" />
-            Your Credential
+            My Credentials
           </span>
         </div>
       </Link>
