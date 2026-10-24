@@ -27,12 +27,13 @@ import { profile } from '@/data/profile'
  *
  * Motion is transform-only on a clipped inner track, so a card never adds
  * height and Home stays a single viewport.
- */
 
-const thumbSrc = (f: Funnel) =>
-  `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
+
+*const thumbSrc = (f: Funnel) =>
+*  `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
 
 const PROJECT_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0], gymFunnel[1]].filter(Boolean)
+*/
 const SHOWCASE_SHOTS = [
     '/showcase/screen-1.png',
     '/showcase/screen-2.png',
