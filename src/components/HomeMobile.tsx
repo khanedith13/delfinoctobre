@@ -47,11 +47,11 @@ export function HomeStats() {
 }
 
 const TILES = [
-  { n: '01', label: 'Projects', to: '/projects', title: 'PLACEHOLDER - projects headline', desc: 'Tell me what to put here.', img: '/placeholders/project-1.jpg' },
-  { n: '02', label: 'Services', to: '/services', title: 'PLACEHOLDER - services headline', desc: 'Tell me what to put here.', Icon: Stack },
-  { n: '03', label: 'Showcase', to: '/showcase', title: 'PLACEHOLDER - your flagship', desc: 'Tell me what to put here.', Icon: Coffee, accent: true },
-  { n: '04', label: 'Testimonials', to: '/testimonials', title: 'PLACEHOLDER - testimonials headline', desc: 'Tell me what to put here.', img: '/placeholders/testimonial-1.jpg' },
-  { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'PLACEHOLDER - one line about you.', img: profile.avatarSrc },
+  { n: '01', label: 'Projects', to: '/projects', title: 'Featured Projects', desc: 'Ideas Into Reality', img: '/placeholders/project-1.jpg' },
+  { n: '02', label: 'Services', to: '/services', title: 'Services I Offer', desc: 'Solutions That Deliver', Icon: Stack },
+  { n: '03', label: 'Showcase', to: '/showcase', title: 'Turning Ideas Into Working Solutions', desc: 'Innovation In Action', Icon: Coffee, accent: true },
+  { n: '04', label: 'Testimonials', to: '/testimonials', title: 'What People Say', desc: 'Trust Through Results', img: '/placeholders/testimonial-1.jpg' },
+  { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'Developer Behind Solutions', img: profile.avatarSrc },
 ] as const
 
 export function HomeExplore() {
