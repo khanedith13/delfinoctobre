@@ -52,13 +52,13 @@ export const profile: Profile = {
   role: 'Aspiring Full Stack Developer',
   avatarSrc: '/profile.png',
   verifiedLabel: 'developer',
-  email: 'octobredelfin13.com',
+  email: 'octobredelfin13@gmail.com',
   location: 'Cebu City, Philippines',
   // Pick any icon from https://phosphoricons.com and import it above.
   stats: [
-    { value: '2 yrs', label: 'Experince', Icon: Briefcase },
+    { value: '1.5 yrs', label: 'Experience', Icon: Briefcase },
     { value: '#007', label: 'Certificates', Icon: SealCheck },
-    { value: 'GMT+8', label: 'TimeZone', Icon: Clock },
+    { value: 'GMT+8', label: 'Time zone', Icon: Clock },
   ],
   // The intro types this line, then flies it into the Home headline.
   // Keep it short: two halves, 5-8 words total.
@@ -66,12 +66,12 @@ export const profile: Profile = {
   hero: {
     body: 'Building Digital Solutions for Clients and Businesses.',
     portraitSrc: '/profile.png',
-    portraitAlt: 'Portrait placeholder',
+    portraitAlt: 'Portrait of Delfin Octobre',
   },
   socials: [
     { label: 'Facebook profile', href: 'https://www.facebook.com/khanedith13', iconPath: '/icons/facebook.svg' },
     { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/octobredelfin13/', iconPath: '/icons/linkedin.svg' },
-    { label: 'Discord profile', href: 'https://discord.com/channels/@khanedith13', iconPath: '/icons/discord.svg' },
+    { label: 'Discord profile', href: 'https://discord.com/channels/1444880103959171113', iconPath: '/icons/discord.svg' },
     { label: 'Github profile', href: 'https://github.com/khanedith13', iconPath: '/icons/github.svg' },
   ],
 }
