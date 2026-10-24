@@ -33,6 +33,13 @@ const thumbSrc = (f: Funnel) =>
   `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
 
 const PROJECT_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0], gymFunnel[1]].filter(Boolean)
+const SHOWCASE_SHOTS = [
+    '/showcase/screen-1.png',
+    '/showcase/screen-2.png',
+    '/showcase/screen-3.png',
+    '/showcase/screen-4.png',
+    '/showcase/screen-5.png',
+]
 
 const OFFERS = [
   { Icon: FunnelSimple, title: 'Full-Stack Web Development', note: 'web dev' },
@@ -90,9 +97,9 @@ export default function HomeBento() {
         <CardHead Icon={FolderOpen} title="Showcase" desc="Built. Tested. Delivered." />
         <div className="bento__media bento__reel" aria-hidden="true">
           <div className="bento__reel-track">
-            {[...PROJECT_SHOTS, ...PROJECT_SHOTS].map((f, i) => (
+            {[...SHOWCASE_SHOTS, ...SHOWCASE_SHOTS].map((src, i) => (
               <span key={i} className="bento__shot">
-                <img src={thumbSrc(f)} alt="" loading="lazy" decoding="async" />
+                <img src={src} alt="" loading="lazy" decoding="async" />
               </span>
             ))}
           </div>
