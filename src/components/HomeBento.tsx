@@ -35,11 +35,11 @@ const thumbSrc = (f: Funnel) =>
 const PROJECT_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0], gymFunnel[1]].filter(Boolean)
 
 const OFFERS = [
-  { Icon: FunnelSimple, title: 'Service One', note: 'PLACEHOLDER one-liner' },
-  { Icon: Gear, title: 'Service Two', note: 'PLACEHOLDER one-liner' },
-  { Icon: AddressBook, title: 'Service Three', note: 'PLACEHOLDER one-liner' },
-  { Icon: Globe, title: 'Service Four', note: 'PLACEHOLDER one-liner' },
-  { Icon: AppWindow, title: 'Service Five', note: 'PLACEHOLDER one-liner' },
+  { Icon: FunnelSimple, title: 'Full-Stack Web Development', note: 'web dev' },
+  { Icon: Gear, title: 'Workflow Automation', note: 'automate' },
+  { Icon: AddressBook, title: 'Low-Code / No-Code Development', note: 'low/no code' },
+  { Icon: Globe, title: 'Data Science & Machine Learning', note: 'data and ml' },
+  { Icon: AppWindow, title: 'Hardware & Technical Support', note: 'support' },
 ] as const
 
 const CLIENTS = [
